@@ -25,7 +25,6 @@ color: rgb(238, 255, 0);
 }
 
 .carousel__track-container{
-background:rgb(144, 238, 177);
 height: 100%;
 position: relative;
 overflow: hidden;
@@ -46,6 +45,18 @@ overflow: hidden;
     bottom: 0;
     width: 100%;
 }
+
+.carousel__slide:nth-child(1){
+    background-color:green;
+}
+.carousel__slide:nth-child(2){
+    background-color:rgb(85, 0, 255);
+}
+.carousel__slide:nth-child(3){
+    background-color:rgb(255, 0, 0);
+}
+
+
 
 /*Buttons*/
 .carousel__button{
@@ -81,4 +92,8 @@ overflow: hidden;
 
 .carousel__index.current-slide{
     background-color: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden{
+    display: none;
 }
