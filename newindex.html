@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Noah Kadvany | Portfolio</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-+3r/4+6ZwJ+8G+uqjzZzv8Jz5zq9J3Z0fZzvJ9z7vzKjJvJZ6KXJZ9JzQzv9J5Z0L4z5J4z0JfzLZ6zqzvz5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/style_reset.css">
+    <link rel="stylesheet" href="CSS/style2.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Navigation -->
+        <nav class="hamburger-nav">
+            <a href="index.html" class="logo">
+                <img src="Images\OK.png" alt="OK Logo">
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Landing Page Content -->
+        <div class="landing-page-wrapper">
+            <p class="typewriter">
+                <span class="bold">Hi, I'm Oliver!</span> I love building bridges: Meet a developer who turns visions
+                into digital realities with unparalleled expertise. Dive in and discover my world of innovation!
+            </p>
+            <img id="profile-picture" src="Images\oli_logo_left.png" alt="Oli profile picture" height="300vh"
+                width="300vh">
+        </div>
+        <!-- Waves Animation -->
+        <div class="waves-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="animated-container">
+                <div class="animated-item">
+                    <div class="project-img">
+                        <img src="Images\cube_dodger.png" alt="Cube game logo">
+                    </div>
+                    <h2 class="card-content">CUBE: 3D Unity Masterpiece</h2>
+                    <p>Dive into a world of intricate design and physics. A testament to precision in game development.
+                    </p>
+                </div>
+                <div class="animated-item">
+                    <div class="project-img">
+                        <img src="Images\Blue_IT_works.png" alt="Blue-IT-Works logo">
+                    </div>
+                    <h2 class="card-content">Blue-IT-Works</h2>
+                    <p>Dive into a world of intricate design and physics. A testament to precision in game development.
+                    </p>
+                </div>
+            </div>
+            <button class="default-button" id="see-more">See More</button>
+        </section>
+
+        
+        <section id="">
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact: <a href="mailto:flexibleoli.12@gmail.com">flexibleoli.12@gmail.com</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="JS/scripts.js"></script>
+</body>
+
+</html>
