@@ -1,56 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html-background" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oliver Noah Kadvany | Contact</title>
+    <link rel="stylesheet" href="CSS/style_reset.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Oliver Noah Kadvany</h1>
+
+    <header class="header unique">
+        <nav class="hamburger-nav">
+            <a href="index.html" class="logo">
+                <img src="Images\OK.png" alt="OK Logo">
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Contact Form -->
-        <section id="contact-form">
-            <h2>Contact Me</h2>
-            <form action="submit_form_endpoint" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>Contact: <a href="mailto:flexibleoli.12@gmail.com">flexibleoli.12@gmail.com</a></p>
-    </footer>
 </body>
+
 </html>
+
+
+<main>
+    <div class="carousel">
+        <!-- is hidden added to avoid error initially-->
+        <button class="carousel__button carousel__button--left is-hidden">left</button>
+
+        <div class="carousel__track-container">
+            <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                    <div class="carousel__info-container">1</div>
+                </li>
+                <li class="carousel__slide">
+                    <div class="carousel__info-container">2</div>
+                </li>
+                <li class="carousel__slide">
+                    <div class="carousel__info-container">3</div>
+                </li>
+            </ul>
+        </div>
+
+        <button class="carousel__button carousel__button--right">right</button>
+
+        <div class="carousel__nav">
+            <button class="carousel__index current-slide"></button>
+            <button class="carousel__index"></button>
+            <button class="carousel__index"></button>
+        </div>
+    </div>
+</main>
