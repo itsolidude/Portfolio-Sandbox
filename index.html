@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oliver Noah Kadvany | Portfolio</title>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="CSS/style_reset.css">
@@ -12,10 +13,11 @@
 </head>
 
 <body>
-
     <div class="content">
+
         <!-- Header Section -->
         <header class="header">
+
             <!-- Navigation -->
             <nav class="hamburger-nav">
                 <a href="index.html" class="logo">
@@ -32,15 +34,22 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
             <!-- Landing Page Content -->
             <div class="landing-page-wrapper">
                 <p class="typewriter">
-                    <span class="bold">Hi, I'm Oliver!</span> I love building bridges: Meet a developer who turns
-                    visions
-                    into digital realities with unparalleled expertise. Dive in and discover my world of innovation!
+                    <span class="bold">Hi, Im Oliver!</span> As an <strong class="strong">honors student</strong> in
+                    <strong class="strong">Computer Programming</strong> at
+                    <a href="https://www.algonquincollege.com/" target="_blank"><button class="default-button"
+                            id="college-link"><span>Algonquin College</span></button></a> located in Ottawa Canada, I am deeply
+                    passionate about <strong class="strong">technology</strong> and the serenity of nature.
+                    Hailing from Switzerland and being 27 years old, I have a fervor for <span
+                        class="strong">entrepreneurial</span> endeavors
+                    and crafting new creations.
                 </p>
                 <img id="profile-picture" src="Images/oli_logo_left.png" alt="Oli profile picture">
             </div>
+
             <!-- Waves Animation[1] -->
             <div class="waves-container">
                 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -59,6 +68,7 @@
             </div>
         </header>
         <main>
+
             <!-- Projects Section -->
             <section id="projects">
                 <h1>Projects</h1>
@@ -67,43 +77,47 @@
                         <div class="project-img">
                             <img src="Images/cube_dodger.png" alt="Cube game logo">
                         </div>
-                        <h2 class="card-content">CUBE: 3D Unity Masterpiece</h2>
-                        <p>Dive into a world of intricate design and physics. A testament to precision in game
-                            development.
-                        </p>
+                        <div class="card-content-wrapper">
+                            <h2 class="card-content">CUBE: 3D Unity Masterpiece</h2>
+                            <p>Dive into the thrill of CUBE, a captivating Unity game crafted with meticulous C# coding and
+                                a robust physics engine.
+                                As my debut into the game programming world, it holds a special place in my heart.
+                            </p>
+                        </div>
                     </div>
                     <div class="animated-item">
                         <div class="project-img">
                             <img src="Images/Blue_IT_works.png" alt="Blue-IT-Works logo">
                         </div>
                         <h2 class="card-content">Blue-IT-Works</h2>
-                        <p>Dive into a world of intricate design and physics. A testament to precision in game
-                            development.
+                        <p>Blue-IT-Works marked my inaugural venture into the entrepreneurial realm.
+                            The journey enriched my understanding of business intricacies, emphasizing the pivotal role
+                            of strategic marketing.
                         </p>
                     </div>
                 </div>
-                <button class="default-button" id="see-more"><span>See More</span></button>
+                <a href="projects.html"><button class="default-button" id="see-more"><span>See More</span></button></a>
             </section>
 
-            <!--About me-->
-            <section id="who-am-i">
-                <div class="banner">
-                    <img src="Images\BlueItWorks.png" alt="">
-                    <div id="about-me-content">
-                        <h1>A little bit about me</h1>
-                        <p><strong>Honors student</strong> in Computer Programming at Algonquin College, Ottawa.
-                            Passionately driven towards a career in software development.</p>
-                    </div>
+            <!--skills-->
+            <h1>Skill Set</h1>
+            <section class="section">
+
+                <!--Skill Set-->
+                <div class="skills-container">
+                    <div class="bar java" data-skill="java"></div>
+                    <div class="bar mongo" data-skill="Mongo.db"></div>
+                    <div class="bar react" data-skill="React.js"></div>
+                    <div class="bar css" data-skill="CSS3"></div>
+                    <div class="bar html" data-skill="HTML5"></div>
                 </div>
             </section>
-
         </main>
     </div>
 
     <!-- Footer Section -->
-
     <footer>
-        
+
         <!--Upper Footer-->
         <div id="upper-footer-wrapper">
 
@@ -122,11 +136,11 @@
                     </ul>
                 </div>
             </div>
-            <img src="Images\OK.png" alt="OK logo">
+            <img src="Images/OK.png" alt="OK logo">
             <div id="upper-footer-wrapper--right">
                 <!-- Contact Section -->
                 <section id="contact">
- 
+
                     <form action="mailto:kadv0001@algonquinlve.com" method="post" enctype="text/plain">
                         <h2>Send me a message!</h2>
                         <label for="name">Name:</label>
@@ -143,7 +157,7 @@
         <!--Lower Footer-->
         <div id="lower-footer">
             <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                <a href="#">NetArchwayLLC</a>.
+                <a href="#"> NetArchwayLLC</a>.
             </p>
         </div>
     </footer>
