@@ -13,17 +13,19 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 //Arrange slides next to each other
 const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
+    slide.style.left = 100 * index + '%';
 };
 slides.forEach(setSlidePosition);
 
 //slide function
 const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    const slideWidth = targetSlide.getBoundingClientRect().width;  // Recalculate the slide width here
+    const amountToMove = -(slides.findIndex(slide => slide === targetSlide) * slideWidth);
+    track.style.transform = 'translateX(' + amountToMove + 'px)';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
-    ;
-}
+};
+
 
 const updateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');
@@ -106,6 +108,28 @@ dotsNav.addEventListener('click', e => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 });
 
+
+ // Resize carousel on window resizing, otherwise the slides break
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    // Clear any existing timeouts to ensure the function doesn't run too often
+    if (resizeTimeout) {
+        clearTimeout(resizeTimeout);
+    }
+
+    // Set a timeout to delay the execution of our function
+    resizeTimeout = setTimeout(() => {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        slides.forEach(setSlidePosition);
+        const currentSlide = track.querySelector('.current-slide');
+        const index = slides.findIndex(slide => slide === currentSlide);
+        const newPosition = -(slideWidth * index);
+        track.style.transform = 'translateX(' + newPosition + 'px)';
+    }, 10); // Run every 10ms
+});
+
+
+
 //---------References----------------
 //[1] K. Powell, "How to code a carousel with HTML, CSS and JavaScript - from scratch (part 2)," YouTube, [Video file], Published on [Date Published]. [Online].
-// Available: https://www.youtube.com/watch?v=gBzsE0oieio&t=3424s&ab_channel=KevinPowell
+// Available: https://www.youtube.com/watch?v=gBzsE0oieio&t=3424s&ab_channel=KevinPowell - Strongly modified by me.
