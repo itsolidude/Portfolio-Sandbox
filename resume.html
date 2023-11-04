@@ -1,33 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="resume-page" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliver Noah Kadvany | Resume</title>
+    <title>Oliver Noah Kadvany | Portfolio</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="CSS/style_reset.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-    <header class="header unique">
-        <nav class="hamburger-nav">
-            <a href="index.html" class="logo">
-                <img src="Images\OK.png" alt="OK Logo">
-            </a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn">
-                <span class="navicon"></span>
-            </label>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="content">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Navigation -->
+            <nav class="hamburger-nav">
+                <a href="index.html" class="logo">
+                    <img src="Images/OK.png" alt="OK Logo">
+                </a>
+                <input class="menu-btn" type="checkbox" id="menu-btn">
+                <label class="menu-icon" for="menu-btn">
+                    <span class="navicon"></span>
+                </label>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Landing Page Content -->
+            <div class="landing-page-wrapper">
+                <p class="typewriter">
+                    <span class="bold">Check Out Some Of My Projects Below!</span>
+                </p>
+            </div>
+            <!-- Waves Animation[1] -->
+            <div class="waves-container">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+        </header>
+        <main>
+
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+
+    <footer>
+
+        <!--Upper Footer-->
+        <div id="upper-footer-wrapper">
+
+            <div id="upper-footer-wrapper--left">
+                <h2><strong>Thanks for coming by!</strong></h2>
+                <p>Every pixel and byte you see here tells a story of passion, dedication, and a drive to innovate.
+                    Exploring my digital domain gives you a glimpse of my journey in the tech world. If a project sparks
+                    your interest or you're keen on discussing the latest in technology, don't hesitate to connect.
+                    Let's continue this digital journey together. Stay inspired!</p>
+                <div class="social-contact">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <img src="Images\OK.png" alt="OK logo">
+            <div id="upper-footer-wrapper--right">
+                <!-- Contact Section -->
+                <section id="contact">
+
+                    <form action="mailto:flexibleoli.12@gmail.com" method="post" enctype="text/plain">
+                        <h2>Send me a message!</h2>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button id="form-button" class="default-button" type="submit"><span>Send</span></button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <!--Lower Footer-->
+        <div id="lower-footer">
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                <a href="#">NetArchwayLLC</a>.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="JS/carousel.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+<!-- References -->
+
+<!--  [1] Goodkatz, "Simple CSS Waves | Mobile & Full width," CodePen, [Online]. Available: https://codepen.io/goodkatz/pen/LYPGxQz.
+      Accessed: Oct. 28, 2023. Modified.-->

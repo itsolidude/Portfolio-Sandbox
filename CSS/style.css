@@ -1,5 +1,7 @@
 /*------------------Importing Fonts--------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 
 /*------------------Basic Styles-----------------------------------*/
 body {
@@ -51,11 +53,18 @@ h1 {
     font-weight: 300;
     letter-spacing: 2px;
     font-size: 48px;
-    font-family: cursive;
+    font-family: 'Robot';
 }
 
 p {
     font-size: 14px;
+}
+
+#project-page p.typewriter, #contact-page p.typewriter, #resume-page p.typewriter {
+    text-align: center;
+    padding: 0;
+    max-height: 100px;
+    min-height: 100px;
 }
 
 /*-----------------------Header Styles-----------------------*/
@@ -124,6 +133,7 @@ p.typewriter {
     position: relative;
     max-width: 1000px;
     width: 100%;
+    padding: 5px;
     min-height: 56px;
     max-height: 580px;
     white-space: normal;
@@ -352,6 +362,7 @@ html#html-projects .waves-container {
 .animated-item p {
     padding: 5px;
     font-size: 1.5vh;
+    text-align: center;
 }
 
 .animated-item:hover {
@@ -731,13 +742,6 @@ form.contact-form {
     flex-wrap: wrap;
 }
 
-#contact-page p.typewriter {
-    text-align: center;
-    padding: 0;
-    max-height: 100px;
-    min-height: 100px;
-}
-
 #contact-page main {
     margin: 20px 0 90px 0;
 }
@@ -787,8 +791,8 @@ iframe {
     font-weight: 600;
 }
 
-.contact-details ul li{
-    margin: 5px 0 ;
+.contact-details ul li {
+    margin: 5px 0;
 }
 
 /*-------------------------------------------------------------------*/
@@ -895,7 +899,7 @@ iframe {
     }
 
     .contact-wrapper {
-    width: 100vw;
+        width: 100vw;
     }
 }
 
@@ -926,8 +930,12 @@ iframe {
     }
 }
 
-
 /*-------------------------------Carousel------------------------------------*/
+
+#project-page section#section {
+    width: 50%;
+    margin: 0 0 55px 0;
+}
 
 #projects-header main {
     display: flex;
@@ -962,8 +970,8 @@ header#projects-header~main {
 .carousel {
     position: relative;
     height: 600px;
-    width: 80%;
-    z-index: 2000;
+    width: 100%;
+    z-index: 500;
     margin: auto;
 }
 
@@ -1002,20 +1010,45 @@ header#projects-header~main {
     background-color: rgb(9, 255, 0);
 }
 
-/*-------------------------Buttons---------------------------------*/
+/*------------------------- Carousel Buttons---------------------------------*/
 .carousel__button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 200px;
 }
 
 .carousel__button--left {
-    left: -50px;
+    left: 40px;
+    top: 100%;
+    margin-top: 10px;
 }
 
 .carousel__button--right {
-    right: -50px;
+    right: 40px;
+    margin-top: 10px;
+}
+
+.carousel__button--right,
+.carousel__button--left {
+    background-color: transparent;
+    border: none;
+}
+
+/*Arrow icons added*/
+button.carousel__button.carousel__button--right.fas.fa-chevron-right,
+button.carousel__button.carousel__button--left.fas.fa-chevron-left {
+    font-size: 36px;
+    color: #00000094;
+}
+
+button.carousel__button.carousel__button--right.fas.fa-chevron-right:hover,
+button.carousel__button.carousel__button--left.fas.fa-chevron-left:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+button.carousel__button.carousel__button--right.fas.fa-chevron-right:active,
+button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
+    color: #00000094;
+    cursor: pointer;
 }
 
 /*------------------------------Indicators-----------------------------------------*/
@@ -1032,6 +1065,9 @@ header#projects-header~main {
     background-color: rgba(0, 0, 0, 0.4);
     margin: 0 12px;
     border: none;
+}
+.carousel__index:hover {
+    cursor: pointer;
 }
 
 .carousel__index.current-slide {
@@ -1100,6 +1136,10 @@ header#projects-header~main {
 
     p.copyright-text {
         padding-bottom: 10px;
+    }
+
+    #project-page section#section {
+        width: 90%;
     }
 
     #upper-footer-wrapper--left p {

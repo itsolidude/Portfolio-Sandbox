@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oliver Noah Kadvany | Portfolio</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="CSS/style_reset.css">
@@ -34,7 +35,9 @@
             </nav>
             <!-- Landing Page Content -->
             <div class="landing-page-wrapper">
-    
+                <p class="typewriter">
+                    <span class="bold">Check Out Some Of My Projects!</span>
+                </p>
             </div>
             <!-- Waves Animation[1] -->
             <div class="waves-container">
@@ -54,15 +57,14 @@
             </div>
         </header>
         <main>
-            
+
 
             <!--Carousel-->
             <section id="section">
-                <h1>Past Projects</h1>
                 <div class="carousel">
                     <!-- is hidden added to avoid error initially-->
-                    <button class="carousel__button carousel__button--left is-hidden">left</button>
-            
+                    <button class="carousel__button carousel__button--left fas fa-chevron-left is-hidden"></button>
+
                     <div class="carousel__track-container">
                         <ul class="carousel__track">
                             <li class="carousel__slide current-slide">
@@ -74,50 +76,53 @@
                             <li class="carousel__slide">
                                 <div class="carousel__info-container">3</div>
                             </li>
+                            <li class="carousel__slide">
+                                <div class="carousel__info-container">4</div>
+                            </li>
                         </ul>
                     </div>
-            
-                    <button class="carousel__button carousel__button--right">right</button>
-            
+                    <button class="carousel__button carousel__button--right fas fa-chevron-right"></button>
+                    <!--Navigation index dots-->
                     <div class="carousel__nav">
                         <button class="carousel__index current-slide"></button>
+                        <button class="carousel__index"></button>
                         <button class="carousel__index"></button>
                         <button class="carousel__index"></button>
                     </div>
                 </div>
             </section>
-<!-- Projects Section -->
-<section id="projects">
-    <h1>Current Projects in the works</h1>
-    <div class="animated-container">
-        <div class="animated-item">
-            <div class="project-img">
-                <img src="Images/cube_dodger.png" alt="Cube game logo">
-            </div>
-            <h2 class="card-content">CUBE: 3D Unity Masterpiece</h2>
-            <p>Dive into a world of intricate design and physics. A testament to precision in game
-                development.
-            </p>
-        </div>
-        <div class="animated-item">
-            <div class="project-img">
-                <img src="Images/Blue_IT_works.png" alt="Blue-IT-Works logo">
-            </div>
-            <h2 class="card-content">Blue-IT-Works</h2>
-            <p>Dive into a world of intricate design and physics. A testament to precision in game
-                development.
-            </p>
-        </div>
-    </div>
-    <button class="default-button" id="see-more"><span>See More</span></button>
-</section>
+            <!-- Projects Section -->
+            <section id="projects">
+                <h1>Current Projects in the works</h1>
+                <div class="animated-container">
+                    <div class="animated-item">
+                        <div class="project-img">
+                            <img src="Images/cube_dodger.png" alt="Cube game logo">
+                        </div>
+                        <h2 class="card-content">CUBE: 3D Unity Masterpiece</h2>
+                        <p>Dive into a world of intricate design and physics. A testament to precision in game
+                            development.
+                        </p>
+                    </div>
+                    <div class="animated-item">
+                        <div class="project-img">
+                            <img src="Images/Blue_IT_works.png" alt="Blue-IT-Works logo">
+                        </div>
+                        <h2 class="card-content">Blue-IT-Works</h2>
+                        <p>Dive into a world of intricate design and physics. A testament to precision in game
+                            development.
+                        </p>
+                    </div>
+                </div>
+                <a href="index.html"><button class="default-button"><span>Home</span></button></a>
+            </section>
         </main>
     </div>
 
     <!-- Footer Section -->
 
     <footer>
-        
+
         <!--Upper Footer-->
         <div id="upper-footer-wrapper">
 
@@ -140,7 +145,7 @@
             <div id="upper-footer-wrapper--right">
                 <!-- Contact Section -->
                 <section id="contact">
- 
+
                     <form action="mailto:flexibleoli.12@gmail.com" method="post" enctype="text/plain">
                         <h2>Send me a message!</h2>
                         <label for="name">Name:</label>

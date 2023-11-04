@@ -109,15 +109,15 @@ dotsNav.addEventListener('click', e => {
 });
 
 
- // Resize carousel on window resizing, otherwise the slides break
+ // Fire on window resizing, otherwise the slides break
 let resizeTimeout;
 window.addEventListener('resize', () => {
-    // Clear any existing timeouts to ensure the function doesn't run too often
+    // Clear any existing timeouts to ensure the function doesn't run too much
     if (resizeTimeout) {
         clearTimeout(resizeTimeout);
     }
 
-    // Set a timeout to delay the execution of our function
+    // Set a timeout to delay the execution of function
     resizeTimeout = setTimeout(() => {
         const slideWidth = slides[0].getBoundingClientRect().width;
         slides.forEach(setSlidePosition);
@@ -127,8 +127,6 @@ window.addEventListener('resize', () => {
         track.style.transform = 'translateX(' + newPosition + 'px)';
     }, 10); // Run every 10ms
 });
-
-
 
 //---------References----------------
 //[1] K. Powell, "How to code a carousel with HTML, CSS and JavaScript - from scratch (part 2)," YouTube, [Video file], Published on [Date Published]. [Online].
