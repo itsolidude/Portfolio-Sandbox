@@ -1,20 +1,21 @@
-/* Importing Fonts */
+/*------------------Importing Fonts--------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-/* Basic Styles */
+/*------------------Basic Styles-----------------------------------*/
 body {
     overflow-x: hidden;
 }
 
 .content {
-    min-height: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
     padding-bottom: 60px;
     /* Height of the footer */
     box-sizing: border-box;
     /* Including padding in height */
 }
 
-/* General Styles */
+/*----------------------General Styles---------------------*/
 main {
     display: flex;
     flex-direction: column;
@@ -38,8 +39,7 @@ section.section {
     color: #ffffff;
 }
 
-
-/* Typography Styles */
+/*--------------------Typography Styles---------------------*/
 
 p {
     font-family: 'Lato', sans-serif;
@@ -58,7 +58,7 @@ p {
     font-size: 14px;
 }
 
-/* Header Styles */
+/*-----------------------Header Styles-----------------------*/
 .header {
     position: relative;
     text-align: left;
@@ -73,7 +73,7 @@ p {
     background: none;
 }
 
-/* Navbar Styles */
+/*---------------Navbar Styles-------------------------*/
 .navbar li {
     cursor: pointer;
 }
@@ -94,7 +94,7 @@ p {
     margin-right: 20px;
 }
 
-/* Landing Page Styles */
+/* ------------------Landing Page Styles------------------- */
 .landing-page-wrapper {
     display: flex;
     justify-content: center;
@@ -111,8 +111,7 @@ button#college-link {
     border: 1px solid #ffff00a8;
 }
 
-/* Typewriter Animation Styles */
-/* ------------------------- TYPEWRITER ANIMATION ------------------------- */
+/*--------------------Typewriter Animation----------------------*/
 p.typewriter {
     border-right: solid 3px rgba(0, 255, 0, .75);
     white-space: nowrap;
@@ -152,7 +151,7 @@ p.typewriter {
     }
 }
 
-/* Image Styles */
+/*-----------------Image Styles-----------------*/
 #profile-picture {
     height: 300px;
     width: 300px;
@@ -169,7 +168,7 @@ img {
     color: #35ff35;
 }
 
-/* Waves Styles */
+/*------------------------Waves Styles---------------*/
 .waves {
     position: relative;
     width: 100%;
@@ -201,7 +200,7 @@ html#html-projects .waves-container {
     }
 }
 
-/* Hamburger Navigation Styles */
+/*--------------------Hamburger Navigation Styles------------------*/
 .hamburger-nav {
     display: flex;
     justify-content: space-evenly;
@@ -308,7 +307,7 @@ html#html-projects .waves-container {
     background-color: #0083ff40;
 }
 
-/* Project Cards */
+/*----------------------Project Cards----------------------------*/
 #projects {
     max-width: 75%;
     margin-top: 30px;
@@ -399,6 +398,10 @@ h2.card-content {
     border-radius: 15px;
 }
 
+.default-button.sharp {
+    border-radius: 5px;
+}
+
 #see-more {
     display: block;
     margin-bottom: 20px;
@@ -407,7 +410,7 @@ h2.card-content {
 
 
 
-/* Button Animations */
+/*--------------------------Button Animations-------------------------*/
 .default-button {
     border-radius: 5px;
     background-color: #f4511e;
@@ -448,14 +451,13 @@ h2.card-content {
 }
 
 
-/* About Me */
+/*-----------------------About Me----------------------------*/
 div#about-me-content {
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 60%;
-
     border: 1px solid black;
     margin: 2% 0;
 }
@@ -468,7 +470,7 @@ div#about-me-content p {
     text-shadow: 1px -1px 13px rgba(0, 0, 0, 0.37);
 }
 
-/*Skills*/
+/*-------------------Skills--------------------*/
 
 .skills-container {
     width: 70%;
@@ -556,7 +558,7 @@ div#about-me-content p {
 
 
 
-/* Footer */
+/*-----------------------Footer------------------------*/
 footer {
     height: 100%;
     display: flex;
@@ -689,6 +691,7 @@ p.copyright-text {
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .fab.fa-facebook:hover {
@@ -711,10 +714,93 @@ p.copyright-text {
     color: #ea4c89;
 }
 
-/* -------------------------Responsive Design -----------------------*/
+
+/*-------------------Contact page---------------------------*/
+
+form.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin-top: 65px;
+    flex-wrap: wrap;
+}
+
+#contact-page p.typewriter {
+    text-align: center;
+    padding: 0;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+#contact-page main {
+    margin: 20px 0 90px 0;
+}
+
+.contact-wrapper .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 45%;
+}
+
+.contact-wrapper .contact-form,
+.contact-wrapper .contact-details {
+    margin: 0 40px 40px 40px;
+}
+
+.contact-wrapper .contact-details {
+    flex-grow: 1;
+}
+
+.contact-wrapper .contact-form>* {
+    display: block;
+    width: auto;
+    min-width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+section.contact-section p {
+    text-align: center;
+    width: 90%;
+    font-size: 2.5vh;
+}
+
+section.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe {
+    margin: 10px 0;
+}
+
+.contact-details h3 {
+    font-weight: 600;
+}
+
+.contact-details ul li{
+    margin: 5px 0 ;
+}
+
+/*-------------------------------------------------------------------*/
+/*                          Responsive Design                        */
+/*-------------------------------------------------------------------*/
 
 /* Tablet styles */
 @media (max-width: 768px) {
+
+    .contact-wrapper {
+        margin-top: 35px;
+    }
 
     section.section {
         width: 85%;
@@ -807,9 +893,13 @@ p.copyright-text {
     #projects {
         max-width: 100%;
     }
+
+    .contact-wrapper {
+    width: 100vw;
+    }
 }
 
-/* larger screens */
+/*--------------------------larger screens--------------------------*/
 @media (min-width: 769px) {
     .hamburger-nav .menu {
         position: initial;
@@ -837,7 +927,7 @@ p.copyright-text {
 }
 
 
-/* Carousel */
+/*-------------------------------Carousel------------------------------------*/
 
 #projects-header main {
     display: flex;
@@ -912,7 +1002,7 @@ header#projects-header~main {
     background-color: rgb(9, 255, 0);
 }
 
-/* Buttons */
+/*-------------------------Buttons---------------------------------*/
 .carousel__button {
     position: absolute;
     top: 50%;
@@ -928,7 +1018,7 @@ header#projects-header~main {
     right: -50px;
 }
 
-/* Indicators */
+/*------------------------------Indicators-----------------------------------------*/
 .carousel__nav {
     display: flex;
     justify-content: center;
@@ -952,8 +1042,13 @@ header#projects-header~main {
     display: none;
 }
 
-/* very large screens */
+/*-----------------------very large screens---------------------------------*/
 @media (max-width: 1765px) {
+
+    #contact-page main {
+        margin: 20px 0 120px 0;
+    }
+
     #upper-footer-wrapper {
         display: flex;
         width: 100%;
@@ -1000,10 +1095,8 @@ header#projects-header~main {
     }
 }
 
-/* Tablet styles */
+/*-------------------------Tablet styles-------------------------------*/
 @media (max-width: 768px) {
-
-
 
     p.copyright-text {
         padding-bottom: 10px;
@@ -1025,6 +1118,13 @@ header#projects-header~main {
 
     h1 {
         font-size: 24px;
+    }
+
+    #contact-page .typewriter {
+        display: flex;
+        padding-bottom: 9vh;
+        justify-content: center;
+        align-items: center;
     }
 
     p.typewriter {
@@ -1088,7 +1188,7 @@ header#projects-header~main {
     }
 }
 
-/* Larger screens */
+/*------------------------Larger screens------------------------------------*/
 @media (min-width: 769px) {
     .hamburger-nav .menu {
         position: initial;
