@@ -60,7 +60,11 @@ p {
     font-size: 14px;
 }
 
-#project-page p.typewriter, #contact-page p.typewriter, #resume-page p.typewriter {
+#project-page p.typewriter,
+#contact-page p.typewriter,
+#resume-page p.typewriter,
+#project-page p.typewriter
+ {
     text-align: center;
     padding: 0;
     max-height: 100px;
@@ -135,7 +139,7 @@ p.typewriter {
     width: 100%;
     padding: 5px;
     min-height: 56px;
-    max-height: 580px;
+    max-height: 600px;
     white-space: normal;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -344,7 +348,7 @@ html#html-projects .waves-container {
 }
 
 .animated-item {
-    padding: 0px 0px 30px 0px;
+    padding: 0px 0px 10px 0px;
     display: flex;
     border-radius: 10px;
     min-width: 200px;
@@ -379,7 +383,8 @@ html#html-projects .waves-container {
 .project-img img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: block;
 }
 
@@ -417,9 +422,6 @@ h2.card-content {
     display: block;
     margin-bottom: 20px;
 }
-
-
-
 
 /*--------------------------Button Animations-------------------------*/
 .default-button {
@@ -493,6 +495,7 @@ div#about-me-content p {
     margin-bottom: 35px;
 }
 
+/*skills animation keyframes*/
 @keyframes load {
     from {
         width: 0%
@@ -539,7 +542,32 @@ div#about-me-content p {
     -moz-animation: load 2s 0s;
     -o-animation: load 2s 0s;
     background-color: #399f41;
+
 }
+
+/* Striped bar animation */
+/* .bar::before {
+    content: attr(data-skill);
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+    border-radius: inherit;
+    animation: load 2s 0s, move-stripes 2s linear infinite;
+    background: repeating-linear-gradient(
+      -45deg,
+      #399f41,
+      #399f41 10px,
+      #388700 10px,
+      #388700 30px
+    );
+}
+
+@keyframes move-stripes {
+    to {
+        background-position: 20px 0;
+    }
+} */
+
+
 
 
 .bar.java::before {
@@ -631,7 +659,7 @@ section#contact form input {
 }
 
 .social-contact,
-social-icons {
+.social-icons {
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -795,6 +823,218 @@ iframe {
     margin: 5px 0;
 }
 
+/*-------------------------------Carousel------------------------------------*/
+
+#project-page section#section {
+    width: 50%;
+    margin: 0 0 55px 0;
+}
+
+#projects-header main {
+    display: flex;
+}
+
+.header#projects-header {
+    background: none;
+}
+
+header#projects-header~main {
+    display: block;
+    width: 55%;
+}
+
+.carousel__info-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.carousel__button {
+    width: 50px;
+    height: 30px;
+    color: blue;
+}
+
+.carousel__index {
+    width: 10px;
+    height: 10px;
+}
+
+.carousel {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.carousel__track {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.3s ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* .carousel__slide:nth-child(1) {
+    background-color: rgb(255, 0, 0);
+}
+
+.carousel__slide:nth-child(2) {
+    background-color: rgb(0, 60, 255);
+}
+
+.carousel__slide:nth-child(3) {
+    background-color: rgb(9, 255, 0);
+}
+ */
+/*----------------Carousel slides-------------------*/
+div#carousel__info-text {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    box-shadow: inset 0px 5px 13px 7px #aaaaaa;
+}
+
+div#carousel__info-text strong {
+    font-size: 1.5vh;
+    margin: 10px;
+}
+
+div#carousel__info-text h2 {
+    font-size: 3vh;
+    margin: 10px;
+
+}
+
+div#carousel__info-text p {
+    font-size: 2vh;
+    text-align: center;
+    margin: 10px;
+}
+
+div#carousel__info-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#carousel__info-img img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    height: auto;
+    border-radius: 20px;
+}
+
+div#carousel__info-text {
+    z-index: 500;
+    opacity: 1;
+    transition: opacity 0.5s;
+    /* 0.5s duration*/
+
+}
+
+div#carousel__info-text:hover {
+    opacity: 0;
+}
+
+div#carousel__info-text:hover {
+    animation: fadeOut 0.5s forwards;
+}
+
+
+/*------------------------- Carousel Buttons---------------------------------*/
+.carousel__button {
+    position: absolute;
+}
+
+.carousel__button--left {
+    left: 40px;
+    top: 100%;
+    margin-top: 10px;
+}
+
+.carousel__button--right {
+    right: 40px;
+    margin-top: 10px;
+}
+
+.carousel__button--right,
+.carousel__button--left {
+    background-color: transparent;
+    border: none;
+}
+
+/*Arrow icons added*/
+button.carousel__button.carousel__button--right.fas.fa-chevron-right,
+button.carousel__button.carousel__button--left.fas.fa-chevron-left {
+    font-size: 36px;
+    color: #00000094;
+}
+
+button.carousel__button.carousel__button--right.fas.fa-chevron-right:hover,
+button.carousel__button.carousel__button--left.fas.fa-chevron-left:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+button.carousel__button.carousel__button--right.fas.fa-chevron-right:active,
+button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
+    color: #00000094;
+    cursor: pointer;
+}
+
+/*------------------------------Indicators-----------------------------------------*/
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.carousel__index {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0 12px;
+    border: none;
+}
+
+.carousel__index:hover {
+    cursor: pointer;
+}
+
+.carousel__index.current-slide {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden {
+    display: none;
+}
+
 /*-------------------------------------------------------------------*/
 /*                          Responsive Design                        */
 /*-------------------------------------------------------------------*/
@@ -839,7 +1079,6 @@ iframe {
     }
 
     p.typewriter {
-        display: none;
         padding-bottom: 9vh;
     }
 
@@ -930,159 +1169,14 @@ iframe {
     }
 }
 
-/*-------------------------------Carousel------------------------------------*/
 
-#project-page section#section {
-    width: 50%;
-    margin: 0 0 55px 0;
-}
-
-#projects-header main {
-    display: flex;
-}
-
-.header#projects-header {
-    background: none;
-}
-
-header#projects-header~main {
-    display: block;
-    width: 55%;
-}
-
-.carousel__info-container {
-    width: 100%;
-    height: 100%;
-}
-
-.carousel__button {
-    width: 50px;
-    height: 30px;
-    color: blue;
-}
-
-.carousel__index {
-    width: 10px;
-    height: 10px;
-    color: rgb(238, 255, 0);
-}
-
-.carousel {
-    position: relative;
-    height: 600px;
-    width: 100%;
-    z-index: 500;
-    margin: auto;
-}
-
-.carousel__track-container {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel__track {
-    position: relative;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    transition: transform 0.3s ease-in;
-}
-
-.carousel__slide {
-    position: absolute;
-    border-radius: 15px;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.carousel__slide:nth-child(1) {
-    background-color: rgb(255, 0, 0);
-}
-
-.carousel__slide:nth-child(2) {
-    background-color: rgb(0, 60, 255);
-}
-
-.carousel__slide:nth-child(3) {
-    background-color: rgb(9, 255, 0);
-}
-
-/*------------------------- Carousel Buttons---------------------------------*/
-.carousel__button {
-    position: absolute;
-}
-
-.carousel__button--left {
-    left: 40px;
-    top: 100%;
-    margin-top: 10px;
-}
-
-.carousel__button--right {
-    right: 40px;
-    margin-top: 10px;
-}
-
-.carousel__button--right,
-.carousel__button--left {
-    background-color: transparent;
-    border: none;
-}
-
-/*Arrow icons added*/
-button.carousel__button.carousel__button--right.fas.fa-chevron-right,
-button.carousel__button.carousel__button--left.fas.fa-chevron-left {
-    font-size: 36px;
-    color: #00000094;
-}
-
-button.carousel__button.carousel__button--right.fas.fa-chevron-right:hover,
-button.carousel__button.carousel__button--left.fas.fa-chevron-left:hover {
-    color: #000000;
-    cursor: pointer;
-}
-
-button.carousel__button.carousel__button--right.fas.fa-chevron-right:active,
-button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
-    color: #00000094;
-    cursor: pointer;
-}
-
-/*------------------------------Indicators-----------------------------------------*/
-.carousel__nav {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-.carousel__index {
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background-color: rgba(0, 0, 0, 0.4);
-    margin: 0 12px;
-    border: none;
-}
-.carousel__index:hover {
-    cursor: pointer;
-}
-
-.carousel__index.current-slide {
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-.is-hidden {
-    display: none;
-}
 
 /*-----------------------very large screens---------------------------------*/
 @media (max-width: 1765px) {
 
-    #contact-page main {
-        margin: 20px 0 120px 0;
+
+    .carousel {
+        height: 41vh;
     }
 
     #upper-footer-wrapper {
@@ -1134,12 +1228,17 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
 /*-------------------------Tablet styles-------------------------------*/
 @media (max-width: 768px) {
 
+    .carousel {
+        height: 52vh;
+    }
+
     p.copyright-text {
         padding-bottom: 10px;
     }
 
     #project-page section#section {
         width: 90%;
+        margin-top: 30px;
     }
 
     #upper-footer-wrapper--left p {
@@ -1168,7 +1267,6 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
     }
 
     p.typewriter {
-        display: none;
         padding-bottom: 9vh;
     }
 
@@ -1248,6 +1346,7 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
 
     p.typewriter {
         padding-right: 5vh;
+        padding-left: 2vh;
     }
 
     .animated-item {

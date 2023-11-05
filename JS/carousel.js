@@ -1,6 +1,7 @@
 
 //carousel [1]
 
+
 //Defining elements I need
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
@@ -125,9 +126,8 @@ window.addEventListener('resize', () => {
         const index = slides.findIndex(slide => slide === currentSlide);
         const newPosition = -(slideWidth * index);
         track.style.transform = 'translateX(' + newPosition + 'px)';
-    }, 10); // Run every 10ms
+    }, 5); // Run every 10ms
 });
-
 //---------References----------------
 //[1] K. Powell, "How to code a carousel with HTML, CSS and JavaScript - from scratch (part 2)," YouTube, [Video file], Published on [Date Published]. [Online].
 // Available: https://www.youtube.com/watch?v=gBzsE0oieio&t=3424s&ab_channel=KevinPowell - Strongly modified by me.
