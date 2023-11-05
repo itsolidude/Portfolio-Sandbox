@@ -1,11 +1,24 @@
+<!-- 
+   Student name: Oliver Kadvany
+   Student ID: 041096826
+   File name: resume.html
+   Created Date: October 27, 2023
+   Description: A resume page for my portfolio website.
+   -->
+
 <!DOCTYPE html>
 <html id="resume-page" lang="en">
 
 <head>
+    <!-- Meta Information -->
     <meta charset="UTF-8">
+    <meta name="keywords" content="Resume, Animation">
+    <meta name="author" content="Oliver Kadvany">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliver Noah Kadvany | Portfolio</title>
+
+    <title>Oliver Noah Kadvany | Resume</title>
     <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="CSS/style_reset.css">
@@ -13,10 +26,10 @@
 </head>
 
 <body>
-
     <div class="content">
         <!-- Header Section -->
         <header class="header">
+
             <!-- Navigation -->
             <nav class="hamburger-nav">
                 <a href="index.html" class="logo">
@@ -33,12 +46,14 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
             <!-- Landing Page Content -->
             <div class="landing-page-wrapper">
                 <p class="typewriter">
-                    <span class="bold">Check Out Some Of My Projects Below!</span>
+                    <span class="bold">Feel free to read my resume!</span>
                 </p>
             </div>
+
             <!-- Waves Animation[1] -->
             <div class="waves-container">
                 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -56,18 +71,193 @@
                 </svg>
             </div>
         </header>
-        <main>
 
+        <!-- Resume Content -->
+        <main>
+            <!-- Contact info -->
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <ul class="title-with-date">
+                    <li><strong>Full Name:</strong> Oliver Noah Kadvany</li>
+                    <li><strong>Email:</strong> kadv0001@algonquinlive.com</li>
+                    <li><strong>Phone:</strong> +1 613 550 3561</li>
+                    <li><a href="https://github.com/itsolidude" target="_blank"><strong>GitHub:</strong><span
+                                id="github-link">https://github.com/itsolidude</span></a></li>
+                </ul>
+            </section>
+
+            <!-- Summary -->
+            <section class="summary">
+                <h2>Summary/Objective</h2>
+                <p>A highly motivated and detail-oriented web developer with experience in HTML, CSS, and JavaScript.
+                    Seeking a challenging role in a dynamic organization where I can utilize my skills and knowledge to
+                    contribute to the success of the company.</p>
+            </section>
+            <section class="work-experience">
+                <h2>Work Experience</h2>
+
+                <hr>
+
+                <!-- work-experience -->
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Freelancer - IT Consultant</h3>
+                        <h3 class="date-stamp">Jan 2016 - Jan 2020</h3>
+                    </div>
+                    <h4>BlueItWorks, Referrals, Kreuzlingen, Thurgau, Switzerland</h4>
+                    <ul class="list-styles">
+                        <li>Led a team of three developers, overseeing project timelines and ensuring client
+                            satisfaction.</li>
+                        <li>Oversaw sales and client relationships as manager, both face-to-face and through digital.
+                        </li>
+                        <li>Strategized and optimized hundreds of marketing strategies for businesses.</li>
+                        <li>Spearheaded various IT projects: web app development, database management, web scraping, and
+                            data visualization.</li>
+                    </ul>
+                </div>
+
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Project Coordinator & Trainee</h3>
+                        <h3 class="date-stamp">May 2014 - Jun 2015</h3>
+                    </div>
+                    <h4>SBW Neue Medien AG, Romanshorn, Thurgau, Switzerland</h4>
+                    <ul class="list-styles">
+                        <li>Underwent training in information design, photo-editing, basic programming.</li>
+                        <li>Entrusted with project coordination, managing project timelines and task division.</li>
+                        <li>Managed customer support and interactions, both over phone and in-person.</li>
+                    </ul>
+                </div>
+
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Mechanic, Poly-technician & Training Coordinator</h3>
+                        <h3 class="date-stamp">Mar 2012 - Apr 2014</h3>
+                    </div>
+                    <h4>GDELS-MOWAG, Kreuzlingen, Thurgau, Switzerland</h4>
+                    <ul class="list-styles">
+                        <li>Introduced, trained, and evaluated all try out apprentices, emphasizing leadership and
+                            mentorship capabilities.</li>
+                        <li> Trained with advanced machinery skills including milling, drilling, and CNC- programming
+                            operations.</li>
+                        <li>Engaged in maintenance of military vehicles, such as Piranhas, Duros, Eagles ensuring
+                            operational readiness and durability.</li>
+                        <li>Collaborated in group planning and organizational tasks, enhancing teamwork and multitasking
+                            skills.</li>
+                        <li>Trained in high precision tool restoration and tuning, ensuring optimal tool performance and
+                            longevity.</li>
+                    </ul>
+                </div>
+
+                <hr>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="responsive-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="frontend-header hidden">Frontend</th>
+                                <th class="backend-header hidden">Backend</th>
+                                <th class="general-header hidden">General/Soft Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="frontend ">HTML</td>
+                                <td class="backend">Node.js</td>
+                                <td class="general">Agile Development</td>
+                            </tr>
+                            <tr>
+                                <td class="frontend">CSS</td>
+                                <td class="backend">Express.js</td>
+                                <td class="general">Project Management</td>
+                            </tr>
+                            <tr>
+                                <td class="frontend">JavaScript</td>
+                                <td class="backend">MongoDB</td>
+                                <td class="general">Communication</td>
+                            </tr>
+                            <tr>
+                                <td class="frontend">jQuery</td>
+                                <td class="backend">SQL</td>
+                                <td class="general">Problem Solving</td>
+                            </tr>
+                            <tr>
+                                <td class="frontend">SASS</td>
+                                <td class="backend">Git</td>
+                                <td class="general hidden"></td>
+                            </tr>
+                            <tr>
+                                <td class="frontend">React</td>
+                                <td class="backend hidden"></td>
+                                <td class="general hidden"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education">
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Computer Programming Diploma</h3>
+                        <h3 class="date-stamp">2023 - Present</h3>
+                    </div>
+                    <h4>Algonquin College, Ottawa, Ontario, Canada</h4>
+                    <ul class="list-styles">
+                        <li>GPA: 3.8 / 4.0</li>
+                    </ul>
+                </div>
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Media-matician Apprenticeship / <br>simultaneous BMS Diploma</h3>
+                        <h3 class="date-stamp">2014 - 2015</h3>
+                    </div>
+                    <h4>SBW Neue Medien AG, Romanshorn, Thurgau, Switzerland</h4>
+                    <ul class="list-styles">
+                        <li>Additional customer service training</li>
+                    </ul>
+                </div>
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Higer level Secondary School Diploma</h3>
+                        <h3 class="date-stamp">2009 - 2011</h3>
+                    </div>
+                    <h4>Sekondar Schule Altnau, Altnau, Thurgau, Switzerland</h4>
+                    <ul class="list-styles">
+                        <li>High Intensity schooling / faster graduation</li>
+                    </ul>
+                </div>
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Basis level Secondary School Diploma</h3>
+                        <h3 class="date-stamp">2008 - 2009</h3>
+                    </div>
+                    <h4>Sekondar Schule Altnau, Altnau, Thurgau, Switzerland</h4>
+                    <ul class="list-styles">
+                        <li>Base level secondary education</li>
+                    </ul>
+                </div>
+                <div class="information-block">
+                    <div class="title-with-date">
+                        <h3>Primary School Diploma</h3>
+                        <h3 class="date-stamp">2002 - 2008</h3>
+                    </div>
+                    <h4>Primar Schule Altnau, Altnau, Thurgau, Switzerland</h4>
+                </div>
+            </section>
         </main>
     </div>
 
     <!-- Footer Section -->
-
     <footer>
-
         <!--Upper Footer-->
         <div id="upper-footer-wrapper">
-
             <div id="upper-footer-wrapper--left">
                 <h2><strong>Thanks for coming by!</strong></h2>
                 <p>Every pixel and byte you see here tells a story of passion, dedication, and a drive to innovate.
@@ -83,11 +273,11 @@
                     </ul>
                 </div>
             </div>
-            <img src="Images\OK.png" alt="OK logo">
+            <img src="Images/OK.png" alt="OK logo">
             <div id="upper-footer-wrapper--right">
-                <!-- Contact Section -->
-                <section id="contact">
 
+                <!-- Contact Me Section -->
+                <section id="contact">
                     <form action="mailto:flexibleoli.12@gmail.com" method="post" enctype="text/plain">
                         <h2>Send me a message!</h2>
                         <label for="name">Name:</label>
@@ -96,28 +286,17 @@
                         <input type="email" id="email" name="email" required>
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" required></textarea>
-                        <button id="form-button" class="default-button" type="submit"><span>Send</span></button>
+                        <input type="submit" value="Send">
                     </form>
                 </section>
             </div>
         </div>
         <!--Lower Footer-->
-        <div id="lower-footer">
-            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
-                <a href="#">NetArchwayLLC</a>.
-            </p>
+        <div id="lower-footer-wrapper">
+            <p>&copy; 2021 Oliver Noah Kadvany</p>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="JS/carousel.js"></script>
 </body>
-
-</html>
-
-
-
-
 
 <!-- References -->
 

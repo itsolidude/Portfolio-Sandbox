@@ -1,9 +1,22 @@
+/* 
+   Student name: Oliver Kadvany
+   Student ID: 041096826
+   File name: style.css
+   Created Date: October 27, 2023
+   Description: The style sheet for all four pages.
+   */
+
+
 /*------------------Importing Fonts--------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 
 /*------------------Basic Styles-----------------------------------*/
+* {
+    line-height: 20px;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -17,7 +30,7 @@ body {
     /* Including padding in height */
 }
 
-/*----------------------General Styles---------------------*/
+/*----------------------General Styles----------------------------*/
 main {
     display: flex;
     flex-direction: column;
@@ -49,7 +62,8 @@ p {
     color: #333333;
 }
 
-h1 {
+h1,
+h2 {
     font-weight: 300;
     letter-spacing: 2px;
     font-size: 48px;
@@ -63,8 +77,7 @@ p {
 #project-page p.typewriter,
 #contact-page p.typewriter,
 #resume-page p.typewriter,
-#project-page p.typewriter
- {
+#project-page p.typewriter {
     text-align: center;
     padding: 0;
     max-height: 100px;
@@ -86,7 +99,7 @@ p {
     background: none;
 }
 
-/*---------------Navbar Styles-------------------------*/
+/*---------------Navbar Styles------------------------------*/
 .navbar li {
     cursor: pointer;
 }
@@ -107,7 +120,7 @@ p {
     margin-right: 20px;
 }
 
-/* ------------------Landing Page Styles------------------- */
+/* ------------------Landing Page Styles--------------------- */
 .landing-page-wrapper {
     display: flex;
     justify-content: center;
@@ -115,7 +128,7 @@ p {
     margin: 20px;
 }
 
-button#college-link {
+span#college-link {
     color: #ffffff;
     background-color: transparent;
     padding: 2px 5px;
@@ -145,6 +158,7 @@ p.typewriter {
     word-wrap: break-word;
 }
 
+/*key frames for typewriter animation*/
 @keyframes animated-text {
     from {
         width: 0;
@@ -165,7 +179,7 @@ p.typewriter {
     }
 }
 
-/*-----------------Image Styles-----------------*/
+/*-----------------Image Styles------------------------*/
 #profile-picture {
     height: 300px;
     width: 300px;
@@ -204,6 +218,7 @@ html#html-projects .waves-container {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
+/*keyframes for waves animation*/
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);
@@ -490,7 +505,11 @@ div#about-me-content p {
     margin: 20px auto;
 }
 
-.skills-container h1 {
+h2#skill-set {
+    margin-bottom: 25px;
+}
+
+.skills-container h2 {
     text-align: center;
     margin-bottom: 35px;
 }
@@ -567,9 +586,6 @@ div#about-me-content p {
     }
 } */
 
-
-
-
 .bar.java::before {
     width: calc(70% - 10px);
     /*background-color: #f14a29cf;*/
@@ -594,8 +610,6 @@ div#about-me-content p {
     width: calc(100% - 10px);
     /* background-color: #e71316;*/
 }
-
-
 
 /*-----------------------Footer------------------------*/
 footer {
@@ -753,8 +767,13 @@ p.copyright-text {
     color: #ea4c89;
 }
 
-
 /*-------------------Contact page---------------------------*/
+
+iframe {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0 3px 0;
+}
 
 form.contact-form {
     display: flex;
@@ -811,16 +830,14 @@ section.contact-section {
     align-items: center;
 }
 
-iframe {
-    margin: 10px 0;
-}
-
 .contact-details h3 {
     font-weight: 600;
 }
 
 .contact-details ul li {
     margin: 5px 0;
+    font-size: small;
+    line-height: 12px;
 }
 
 /*-------------------------------Carousel------------------------------------*/
@@ -904,9 +921,10 @@ header#projects-header~main {
 .carousel__slide:nth-child(3) {
     background-color: rgb(9, 255, 0);
 }
- */
+*/
+
 /*----------------Carousel slides-------------------*/
-div#carousel__info-text {
+div.carousel__info-text {
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -916,31 +934,31 @@ div#carousel__info-text {
     box-shadow: inset 0px 5px 13px 7px #aaaaaa;
 }
 
-div#carousel__info-text strong {
+div.carousel__info-text strong {
     font-size: 1.5vh;
     margin: 10px;
 }
 
-div#carousel__info-text h2 {
+div.carousel__info-text h2 {
     font-size: 3vh;
     margin: 10px;
 
 }
 
-div#carousel__info-text p {
+div.carousel__info-text p {
     font-size: 2vh;
     text-align: center;
     margin: 10px;
 }
 
-div#carousel__info-img {
+div.carousel__info-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-div#carousel__info-img img {
+div.carousel__info-img img {
     display: block;
     position: absolute;
     width: 100%;
@@ -949,22 +967,20 @@ div#carousel__info-img img {
     border-radius: 20px;
 }
 
-div#carousel__info-text {
+div.carousel__info-text {
     z-index: 500;
     opacity: 1;
     transition: opacity 0.5s;
     /* 0.5s duration*/
-
 }
 
-div#carousel__info-text:hover {
+div.carousel__info-text:hover {
     opacity: 0;
 }
 
-div#carousel__info-text:hover {
+div.carousel__info-text:hover {
     animation: fadeOut 0.5s forwards;
 }
-
 
 /*------------------------- Carousel Buttons---------------------------------*/
 .carousel__button {
@@ -1035,12 +1051,233 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
     display: none;
 }
 
+/*----------------------------------Resume----------------------------*/
+
+#resume-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#resume-page section {
+    margin: 25px 0;
+    ;
+}
+
+section.work-experience,
+section.education {
+    display: block;
+    width: 100%;
+}
+
+section.contact-info {
+    margin-bottom: 50px;
+}
+
+#resume-page main section,
+#resume-page main ul,
+#resume-page main li,
+#resume-page main h3,
+#resume-page main h4,
+#resume-page main p,
+#resume-page main hr,
+#resume-page main div {
+    margin: 8px 0 0 0;
+}
+
+#resume-page main h2 {
+    margin: 20px 0;
+}
+
+#resume-page h2 {
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+#resume-page h3 {
+    font-size: 2vh;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+#resume-page h4 {
+    font-size: 1.5vh;
+    font-style: italic;
+}
+
+div.title-with-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    border: 1px dashed black;
+    padding: 5px 10px 10px 10px;
+}
+
+div.title-with-date h3 {
+    margin-bottom: 0;
+}
+
+ul.list-styles {
+    margin: 15px 0 0 50px !important;
+}
+
+ul.list-styles li {
+    width: 65%;
+    line-height: 20px;
+}
+
+.list-styles {
+    list-style-type: disc;
+}
+
+div.information-block {
+    margin: 30px 0 !important;
+}
+
+.title-with-date h3,
+.title-with-date h4 {
+    line-height: 30px;
+}
+
+#resume-page h3.date-stamp {
+    /* font-weight: 500 !important; */
+    font-size: 1.7vh !important;
+}
+
+section.skills {
+    display: block;
+    width: 100%;
+    margin: 30px 0 !important;
+}
+
+/* skills table styles */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: aliceblue;
+    font-weight: bold;
+    border: 1px dashed black;
+}
+
+/*fixing borders*/
+th.frontend-header {
+    border-right: none;
+}
+
+th.backend-header {
+    border-left: none;
+    border-right: none;
+}
+
+th.general-header {
+    border-left: none;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+#github-link {
+    color: #389c00;
+    text-decoration: none;
+}
+
+#github-link:hover {
+    color: #e92f2f;
+}
+
+#github-link:active {
+    color: #389c00;
+}
+
+
 /*-------------------------------------------------------------------*/
 /*                          Responsive Design                        */
 /*-------------------------------------------------------------------*/
 
 /* Tablet styles */
 @media (max-width: 768px) {
+
+    div.title-with-date {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .title-with-date h3,
+    .title-with-date h4 {
+        line-height: 20px;
+    }
+
+    #resume-page h4 {
+        text-align: center;
+    }
+
+    ul.list-styles {
+        margin: 15px 0 0 30px !important;
+    }
+
+    ul.list-styles li {
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin: 0 0 1rem 0;
+    }
+
+    tr:nth-child(odd) {
+        background: #f8f8f8;
+    }
+
+    td {
+        background: #f8f8f8;
+        margin: 0;
+        padding: 0.5rem;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
 
     .contact-wrapper {
         margin-top: 35px;
@@ -1142,7 +1379,7 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
     }
 }
 
-/*--------------------------larger screens--------------------------*/
+/*--------------------------larger screens----------------------------------*/
 @media (min-width: 769px) {
     .hamburger-nav .menu {
         position: initial;
@@ -1169,11 +1406,12 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
     }
 }
 
-
-
 /*-----------------------very large screens---------------------------------*/
 @media (max-width: 1765px) {
 
+    #resume-page main {
+        width: 80%;
+    }
 
     .carousel {
         height: 41vh;
@@ -1228,6 +1466,14 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
 /*-------------------------Tablet styles-------------------------------*/
 @media (max-width: 768px) {
 
+    #projects h1 {
+        margin-bottom: 0px;
+    }
+
+    #index-page p.typewriter {
+        display: none;
+    }
+
     .carousel {
         height: 52vh;
     }
@@ -1255,7 +1501,8 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
         min-height: 40px;
     }
 
-    h1 {
+    h1,
+    h2#skill-set {
         font-size: 24px;
     }
 
@@ -1328,6 +1575,7 @@ button.carousel__button.carousel__button--left.fas.fa-chevron-left:active {
 
 /*------------------------Larger screens------------------------------------*/
 @media (min-width: 769px) {
+
     .hamburger-nav .menu {
         position: initial;
         transform: translateX(0);
