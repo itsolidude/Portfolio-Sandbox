@@ -137,7 +137,6 @@ window.addEventListener('resize', () => {
     }, 5); // Run every 10ms
 });
 
-
 //---------References----------------
 //[1] K. Powell, "How to code a carousel with HTML, CSS and JavaScript - from scratch (part 2)," YouTube, [Video file], Published on [Date Published]. [Online].
 // Available: https://www.youtube.com/watch?v=gBzsE0oieio&t=3424s&ab_channel=KevinPowell - Strongly modified by me.

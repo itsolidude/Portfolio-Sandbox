@@ -345,7 +345,7 @@ html#html-projects .waves-container {
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 2%;
+    margin-bottom: 25px;
 }
 
 #projects h1 {
@@ -552,6 +552,7 @@ h2#skill-set {
 }
 
 .bar::before {
+    width: 0;
     content: attr(data-skill);
     display: inline-block;
     padding: 5px 0 5px 10px;
